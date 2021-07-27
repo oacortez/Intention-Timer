@@ -46,7 +46,37 @@ main {
   justify-content: space-around;
 }
 
-.time {
-  display: inline-flex;
+.inputs {
+  background-color: transparent;
+  color: #eeeeee;
+  outline: none;
+  outline-style: none;
+  outline-offset: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #eeeeee 1px;
+  padding: 3px 10px;
+}
+
+.minutes, .seconds{
+  background-color: transparent;
+  color: #eeeeee;
+  outline: none;
+  outline-style: none;
+  outline-offset: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #eeeeee 1px;
+  padding: 3px 10px;
+}
+
+/* .minutes {
+  float: left;
 
 }
+
+.seconds {
+  float: right;
+} */
