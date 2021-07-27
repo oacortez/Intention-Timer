@@ -7,6 +7,15 @@ Study: #B3FD78
 Meditate: #C278FD
 Exercise: #FD8078
 Error: #EFB7EC */
+* {
+  border: 2px solid yellow;
+}
+
+body{
+  background-color: #2B2733;
+  margin: 0;
+}
+
 header {
   background-color: #46424D;
   color: #FFF;
@@ -16,4 +25,28 @@ header {
   padding-top: 8px;
   padding-bottom:8px;
   text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #CBC9CF;
+}
+
+.box-1 {
+  background-color: #46424D;
+  font-family: Montserrat;
+  font-weight: 400;
+
+}
+
+.new-activity-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.time {
+  display: inline-flex;
+
 }
