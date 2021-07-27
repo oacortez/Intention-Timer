@@ -15,19 +15,23 @@
     <header>
       <h1>INTENTION TIMER</h1>
     </header>
-  <h2>New Activity</h2>
+  <h2>Current Activity</h2>
   <main>
     <section class="box-1" id="box1">
       <p class="category">Select a category</p>
-      <button type="button" class="study-button" id="studyBtn">Study</button>
-      <button type="button" class="meditate-button" id="meditateBtn">Meditate</button>
-      <button type="button" class="exercise-button" id="exerciseBtn">Exercise</button>
+      <div class = "new-activity-section">
+        <button type="button" class="study-button" id="studyBtn">Study</button>
+        <button type="button" class="meditate-button" id="meditateBtn">Meditate</button>
+        <button type="button" class="exercise-button" id="exerciseBtn">Exercise</button>
+      </div>
       <h3>What would you like to accomplish during this time?</h3>
         <input type="text" class="inputs" id="goal"></input>
-      <h3>Minutes</h3>
-        <input type="text" class="minutes" id="minutes"></input>
-      <h3>Seconds</h3>
-        <input type="text" class="seconds" id="seconds"></input>
+        <div class= "time">
+          <h3>Minutes</h3>
+            <input type="text" class="minutes" id="minutes"></input>
+          <h3>Seconds</h3>
+            <input type="text" class="seconds" id="seconds"></input>
+        </div>
       <button type="button" class="start-btn" id="start-btn">START ACTIVITY</button>
     </section>
     <section class="box-2" id="box2">
