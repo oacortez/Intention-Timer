@@ -7,15 +7,14 @@ Study: #B3FD78
 Meditate: #C278FD
 Exercise: #FD8078
 Error: #EFB7EC */
-* {
+/* * {
   border: 2px solid yellow;
-}
+} */
 
 body{
   background-color: #2B2733;
   margin: 0;
 }
-
 header {
   background-color: #46424D;
   color: #FFF;
@@ -26,57 +25,58 @@ header {
   padding-bottom:8px;
   text-align: center;
 }
-
 main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   color: #CBC9CF;
 }
-
 .box-1 {
+  display: flex;
+  flex-direction: column;
+  height:20em;
+  width: 40em;
   background-color: #46424D;
   font-family: Montserrat;
   font-weight: 400;
-
 }
-
 .new-activity-section {
   display: flex;
   justify-content: space-around;
 }
-
+.time {
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-around;
+  }
+.minutes, .seconds {
+  outline: none;
+  outline-style: none;
+  outline-offset: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #EEEEEE 1px;
+  padding: 3px 10px;
+  color: #EEEEEE;
+  background-color: transparent;
+  }
 .inputs {
-  background-color: transparent;
-  color: #eeeeee;
+  display:flex;
   outline: none;
   outline-style: none;
   outline-offset: 0;
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: solid #eeeeee 1px;
+  /* border-bottom: solid #EEEEEE 1px; */
+  justify-content: space-around;
   padding: 3px 10px;
-}
-
-.minutes, .seconds{
+  color: #EEEEEE;
   background-color: transparent;
-  color: #eeeeee;
-  outline: none;
-  outline-style: none;
-  outline-offset: 0;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: solid #eeeeee 1px;
-  padding: 3px 10px;
 }
-
-/* .minutes {
-  float: left;
-
+.start-btn {
+  margin-top: 3em;
+  width: 10em;
+  align-self: flex-end;
 }
-
-.seconds {
-  float: right;
-} */
