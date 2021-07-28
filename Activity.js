@@ -4,7 +4,16 @@ class Activity {
     this.description = description;
     this.minutes = minutes;
     this.seconds = seconds;
-    this.completed = false;
+    this.isCompleted = false;
     this.id = Date.now();
+  }
+  startTimer() {
+    
+  }
+  markComplete() {
+
+  }
+  saveToStorage() {
+
   }
 }
