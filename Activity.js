@@ -8,7 +8,7 @@ class Activity {
     this.id = Date.now();
   }
   startTimer() {
-    
+
   }
   markComplete() {
 
@@ -16,4 +16,4 @@ class Activity {
   saveToStorage() {
 
   }
-}
+};
