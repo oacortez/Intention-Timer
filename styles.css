@@ -40,10 +40,12 @@ main {
   background-color: #46424D;
   font-family: Montserrat;
   font-weight: 400;
+  border-right:#46424D;
 }
 .new-activity-section {
   display: flex;
   justify-content: space-around;
+  
 }
 .time {
   display: flex;
@@ -91,7 +93,11 @@ main {
 .start-btn {
   margin-top: 3em;
   width: 10em;
+  height: 2.5em;
   align-self: flex-end;
+  margin-right: 4em;
+  border-radius: .3em;
+  border: none;
 }
 .activity-form {
 display: flex;
@@ -102,15 +108,81 @@ flex-direction: column;
   flex-direction: column;
   padding: 2em;
 }
-.input-2 {
-  display: flex;
-}
-.input-3 {
-  display: flex;
-}
+
+
 h3 {
   margin-left: 3em;
 }
 label {
   padding:1em
 }
+  /* //NEW STUFF**************** */
+
+  h2 {
+    font-family: Montserrat;
+    font-weight: 300;
+    color: #FFF;
+    margin-left: 1em;
+  }
+
+ .new-activity-section button { */
+  display: flex; 
+   width: 8.5em; 
+  height: 4em;
+  background-color: #46424D;
+  border: 2px solid #CBC9CF;
+  color: #CBC9CF;
+  border-radius: .3em;
+ }  
+
+ #studyBtn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url("/assets/study.svg");
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: top;
+  padding: .5em;
+}
+
+#meditateBtn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url("assets/meditate.svg");
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: top;
+  padding: .5em;
+}
+
+ #exerciseBtn {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-end; 
+  background-image: url("assets/exercise.svg");
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: top;
+   padding: .5em; 
+ } 
+
+.time-labels {
+display:flex;
+justify-content: space-between;
+margin-left: 2em;
+margin-right: 12em;
+} 
+
+.time-inputs {
+  display:flex;
+  justify-content: space-between;
+  margin-left: 3em;
+  margin-right: 7em;
+  /* width: 5em; */
+  /* border: 2px solid yellow; */
+} 
