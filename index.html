@@ -16,7 +16,7 @@
     <header>
       <h1>INTENTION TIMER</h1>
     </header>
-  <h2>Current Activity</h2>
+  <h2>New Activity</h2>
   <main>
     <section class="box-1" id="box1">
       <form class="activity-form">
@@ -30,21 +30,23 @@
           <label for="goal">What would you like to accomplish during this time?</label>
           <input type="text" class="accomplish-input" id="goal"/>
         </div>
-        <div class="input-2">
+        <div class="time-labels">
           <label for="minutes">Minutes</label>
-          <input type="text" class="minutes" id="minutes"/>
-        </div>
-        <div class= "input-3">
           <label for="seconds">Seconds</label>
+          </div>
+        <div class="time-inputs">
+          <input type="text" class="minutes" id="minutes"/>
           <input type="text" class="seconds" id="seconds"/>
         </div>
         <button type="button" class="start-btn" id="start-btn">START ACTIVITY</button>
       </form>
     </section>
     <section class="box-2" id="box2">
-      <h2>Past Activities</h2>
+      <h4>Past Activities</h4>
+      <div class="default-msg">
         <p>You haven't logged any activities yet.</p>
         <p>Complete the form to the left to get started!</p>
+      </div>
     </section>
   </main>
   </body>
