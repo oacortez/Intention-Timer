@@ -9,26 +9,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intention Timer</title>
   </head>
   <body>
     <header>
       <h1>INTENTION TIMER</h1>
     </header>
-  <h2>New Activity</h2>
+  <h2>Current Activity</h2>
   <main>
     <section class="box-1" id="box1">
-      <p class="category">Select a category</p>
-      <button type="button" class="study-button" id="studyBtn">Study</button>
-      <button type="button" class="meditate-button" id="meditateBtn">Meditate</button>
-      <button type="button" class="exercise-button" id="exerciseBtn">Exercise</button>
-      <h3>What would you like to accomplish during this time?</h3>
-        <input type="text" class="inputs" id="goal"></input>
-      <h3>Minutes</h3>
-        <input type="text" class="minutes" id="minutes"></input>
-      <h3>Seconds</h3>
-        <input type="text" class="seconds" id="seconds"></input>
-      <button type="button" class="start-btn" id="start-btn">START ACTIVITY</button>
+      <form class="activity-form">
+        <h3 class="category">Select a category:</h3>
+        <div class = "new-activity-section">
+          <button type="button" class="study-button" id="studyBtn">Study</button>
+          <button type="button" class="meditate-button" id="meditateBtn">Meditate</button>
+          <button type="button" class="exercise-button" id="exerciseBtn">Exercise</button>
+        </div>
+        <div class="input-1">
+          <label for="goal">What would you like to accomplish during this time?</label>
+          <input type="text" class="accomplish-input" id="goal"/>
+        </div>
+        <div class="input-2">
+          <label for="minutes">Minutes</label>
+          <input type="text" class="minutes" id="minutes"/>
+        </div>
+        <div class= "input-3">
+          <label for="seconds">Seconds</label>
+          <input type="text" class="seconds" id="seconds"/>
+        </div>
+        <button type="button" class="start-btn" id="start-btn">START ACTIVITY</button>
+      </form>
     </section>
     <section class="box-2" id="box2">
       <h2>Past Activities</h2>
