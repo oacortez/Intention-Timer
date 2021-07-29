@@ -273,11 +273,13 @@ margin-left: 2em;
 margin-right: 12em;
 }
 
-.time-inputs {
-  display:flex;
-  justify-content: space-between;
-  margin-left: 3em;
-  margin-right: 7em;
-  /* width: 5em; */
-  /* border: 2px solid yellow; */
+.minutes {
+  width: 15em;
+  margin-left: 2.5em;
+}
+
+.seconds {
+  width: 15em;
+  float:right;
+  margin-right:5em;
 }

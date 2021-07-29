@@ -35,8 +35,8 @@
           <label for="seconds">Seconds</label>
           </div>
         <div class="time-inputs">
-          <input type="text" class="minutes" id="minutes"/>
-          <input type="text" class="seconds" id="seconds"/>
+          <input type="number" min="0" max="60" class="minutes" id="minutes"/>
+          <input type="number" min="0" max="59" class="seconds" id="seconds"/>
         </div>
         <button type="button" class="start-btn" id="start-btn">START ACTIVITY</button>
       </form>
