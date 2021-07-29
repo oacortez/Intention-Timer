@@ -220,6 +220,22 @@ label {
   background-position: center;
   background-position: top;
   padding: .5em;
+  border: 2px solid #CBC9CF;
+  color: #CBC9CF;
+}
+
+.meditate-button-active {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url("assets/meditate-active.svg");
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: top;
+  padding: .5em;
+  border: 2px solid purple;
+  color: purple;
 }
 
  .exercise-button {
@@ -232,6 +248,8 @@ label {
   background-position: center;
   background-position: top;
    padding: .5em;
+   border: 2px solid #CBC9CF;
+   color: #CBC9CF;
  }
 
 .time-labels {

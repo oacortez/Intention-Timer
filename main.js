@@ -1,11 +1,21 @@
-// grab one of the buttons
+// //////QUERY SELECTORS///////////////////////
 var studyBtn = document.querySelector('#studyBtn');
-// Create an event listner that responds to a click of one of the buttons
-studyBtn.addEventListener('click', changeColor);
-// the click will invoke a function
-function changeColor(){
-  event.preventDefault();
+var meditateBtn = document.querySelector('#meditateBtn');
 
+
+
+// //////////EVENT LISTENERS ///////////////////
+studyBtn.addEventListener('click', changeStudyColor);
+meditateBtn.addEventListener('click', changeMeditateColor);
+
+
+// ///////EVENT HANDLERS //////////////////////
+function changeStudyColor(){
+  event.preventDefault();
   studyBtn.classList.toggle('study-button-active');
+};
+
+function changeMeditateColor(){
+  event.preventDefault();
+  meditateBtn.classList.toggle('meditate-button-active');
 }
-// that function will change the colors in CSS
