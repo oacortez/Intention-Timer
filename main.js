@@ -1,5 +1,5 @@
 // //////GLOBAL VARIABLES/////////////////////
-// var invalidChars = ['e', '+', '-', '.'];
+
 
 // //////QUERY SELECTORS///////////////////////
 var studyBtn = document.querySelector('#studyBtn');
