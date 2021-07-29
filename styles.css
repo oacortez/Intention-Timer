@@ -190,15 +190,7 @@ label {
 }
 
 .study-button-active {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   background-image: url("assets/study-active.svg");
-  background-size: 1.5em;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position: top;
-  padding: .5em;
   border: 2px solid green;
   color: green;
 }
@@ -243,4 +235,22 @@ margin-right: 12em;
   width: 15em;
   float:right;
   margin-right:5em;
+}
+
+.error-message {
+  padding-bottom: 1em;
+  color: #EFB7EC;
+  margin-left: 25px;
+  visibility: hidden;
+}
+
+.error-message img{
+  height:15px;
+  width: 15px;
+  margin-right: 5px;
+  margin-left: -20px;
+}
+
+.hidden {
+  display: none;
 }

@@ -29,6 +29,7 @@
         <div class="input-1">
           <label for="goal">What would you like to accomplish during this time?</label>
           <input type="text" class="accomplish-input" id="goal"/>
+            <label class= "error-message" id="errorMsg"><img src="assets/warning.svg" alt="error image">A description is required</label>
         </div>
         <div class="time-labels">
           <label for="minutes">Minutes</label>
@@ -38,7 +39,7 @@
           <input type="number" min="0" max="60" class="minutes" id="minutes"/>
           <input type="number" min="0" max="59" class="seconds" id="seconds"/>
         </div>
-        <button type="button" class="start-btn" id="start-btn">START ACTIVITY</button>
+        <button type="button" class="start-btn" id="startBtn">START ACTIVITY</button>
       </form>
     </section>
     <section class="box-2" id="box2">
