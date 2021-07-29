@@ -252,6 +252,20 @@ label {
    color: #CBC9CF;
  }
 
+ .exercise-button-active {
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   background-image: url("assets/exercise-active.svg");
+   background-size: 1.5em;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-position: top;
+   padding: .5em;
+   border: 2px solid salmon;
+   color: salmon;
+ }
+
 .time-labels {
 display:flex;
 justify-content: space-between;
