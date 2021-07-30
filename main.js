@@ -19,7 +19,10 @@ studyBtn.addEventListener('click', changeStudyColor);
 meditateBtn.addEventListener('click', changeMeditateColor);
 exerciseBtn.addEventListener('click', changeExerciseColor);
 minutesInput.addEventListener('keydown', checkInvalidChars);
-startActivityBtn.addEventListener('click', startActivity);
+startActivityBtn.addEventListener('click', function(){
+  checkActiveBtn();
+  checkInputs();
+});
 
 // ///////EVENT HANDLERS //////////////////////
 
@@ -51,13 +54,56 @@ function checkInvalidChars(e){
     console.log('it ran!!');
   }
 };
-function startActivity(){
-  if(!goalInput.value){
+
+
+// function startActivity(){
+//   event.preventDefault();
+//   checkActiveBtn();
+//   checkInputs();
+// }
+
+
+function checkInputs() {
+  if(!goalInput.value) {
     errorMsg.style.visibility = 'visible';
+  } else if(!minutesInput.value) {
+    errorMsg.innerText = 'A minute is required';
+    errorMsg.style.visibility = 'visible';
+  } else if(!secondsInput.value) {
+    errorMsg.innerText = 'A second is required';
+    errorMsg.style.visibility = 'visible';
+  }else {
+    errorMsg.style.visibility = 'hidden';
+    }
   }
-}
 
 
+  function checkActiveBtn() {
+    event.preventDefault();
+    if (studyBtn.classList.contains('study-button-active')
+    || exerciseBtn.classList.contains('exercise-button-active')
+    || meditateBtn.classList.contains('meditate-button-active')) {
+        errorMsg.style.visibility = 'hidden';
+      } else {
+      errorMsg.innerText = "A Catagory is required"
+      errorMsg.style.visibility = 'visible';
+    }
+  }
+
+// function checkActiveBtn() {
+//   if(studyBtn.clicked === true) {
+//      errorMsg.style.visibility = 'visible';
+//   } else {
+//      errorMsg.style.visibility = 'hidden';
+//   }
+// }
+
+
+// // if(studyBtn.clicked === false) {
+//   errorMsg.style.visibility = 'visible';
+// } else {
+//
+// }
 
 
 
