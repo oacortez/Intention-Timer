@@ -19,10 +19,7 @@ studyBtn.addEventListener('click', changeStudyColor);
 meditateBtn.addEventListener('click', changeMeditateColor);
 exerciseBtn.addEventListener('click', changeExerciseColor);
 minutesInput.addEventListener('keydown', checkInvalidChars);
-startActivityBtn.addEventListener('click', function(){
-  checkActiveBtn();
-  checkInputs();
-});
+startActivityBtn.addEventListener('click', checkInputs);
 
 // ///////EVENT HANDLERS //////////////////////
 
@@ -56,6 +53,42 @@ function checkInvalidChars(e){
 };
 
 
+function checkInputs() {
+  event.preventDefault();
+  if(studyBtn.classList.contains('study-button-active') === false
+    && exerciseBtn.classList.contains('exercise-button-active') === false
+    && meditateBtn.classList.contains('meditate-button-active') === false){
+      errorMsg.innerText = "A Catagory is required"
+      errorMsg.style.visibility = 'visible';
+  }else if(!goalInput.value) {
+    errorMsg.innerText = "A description is required"
+    errorMsg.style.visibility = 'visible';
+  }else if(!minutesInput.value) {
+    errorMsg.innerText = 'A minute is required';
+    errorMsg.style.visibility = 'visible';
+  }else if(!secondsInput.value) {
+    errorMsg.innerText = 'A second is required';
+    errorMsg.style.visibility = 'visible';
+  }else{
+      errorMsg.style.visibility = 'hidden';
+    }
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // function startActivity(){
 //   event.preventDefault();
 //   checkActiveBtn();
@@ -63,32 +96,37 @@ function checkInvalidChars(e){
 // }
 
 
-function checkInputs() {
-  if(!goalInput.value) {
-    errorMsg.style.visibility = 'visible';
-  } else if(!minutesInput.value) {
-    errorMsg.innerText = 'A minute is required';
-    errorMsg.style.visibility = 'visible';
-  } else if(!secondsInput.value) {
-    errorMsg.innerText = 'A second is required';
-    errorMsg.style.visibility = 'visible';
-  }else {
-    errorMsg.style.visibility = 'hidden';
-    }
-  }
+// function checkInputs() {
+//   event.preventDefault();
+//   if(!goalInput.value) {
+//     errorMsg.style.visibility = 'visible';
+//   } else if(!minutesInput.value) {
+//     errorMsg.innerText = 'A minute is required';
+//     errorMsg.style.visibility = 'visible';
+//   } else if(!secondsInput.value) {
+//     errorMsg.innerText = 'A second is required';
+//     errorMsg.style.visibility = 'visible';
+//   } else {
+//     errorMsg.style.visibility = 'hidden';
+//     }
+//   }
+//
+//
+//   function checkActiveBtn() {
+//     // event.preventDefault();
+//     if (studyBtn.classList.contains('study-button-active')
+//     || exerciseBtn.classList.contains('exercise-button-active')
+//     || meditateBtn.classList.contains('meditate-button-active')) {
+//         errorMsg.style.visibility = 'hidden';
+//       } else {
+//       errorMsg.innerText = "A Catagory is required"
+//       errorMsg.style.visibility = 'visible';
+//     }
+//   }
 
 
-  function checkActiveBtn() {
-    event.preventDefault();
-    if (studyBtn.classList.contains('study-button-active')
-    || exerciseBtn.classList.contains('exercise-button-active')
-    || meditateBtn.classList.contains('meditate-button-active')) {
-        errorMsg.style.visibility = 'hidden';
-      } else {
-      errorMsg.innerText = "A Catagory is required"
-      errorMsg.style.visibility = 'visible';
-    }
-  }
+
+// if
 
 // function checkActiveBtn() {
 //   if(studyBtn.clicked === true) {
