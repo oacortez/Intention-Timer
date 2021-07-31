@@ -12,6 +12,9 @@ var minutesInput = document.querySelector('#minutes');
 var secondsInput = document.querySelector('#seconds');
 var errorMsg = document.querySelector('#errorMsg');
 var newActivitySection = document.querySelector('#newActivitySection');
+var box1 = document.querySelector('#box1');
+var h2 = document.querySelector('h2');
+
 
 
 
@@ -94,4 +97,6 @@ function checkInputs() {
     var selectedCat = findCategory();
     var newActivity = new Activity(selectedCat, goalInput.value, minutesInput.value, secondsInput.value);
     savedActivities.push(newActivity);
+    box1.style.visibility = 'hidden'  
+    h2.innerText = 'Current Activity'
   };
