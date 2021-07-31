@@ -1,5 +1,5 @@
 // //////DATA MODEL/////////////////////
-
+savedActivities = [];
 
 // //////QUERY SELECTORS///////////////////////
 var form = document.querySelector('.activity-form');
@@ -77,27 +77,21 @@ function checkInputs() {
     }
   };
 
-  function findCategory(details) {
-    if(event.target.classList.contains('study-button-active')){
-      details.category = 'study';
-    }else if (event.target.classList.contains('meditate-button-active')){
-        details.category = 'meditate';
-    }else if (event.target.classList.contains('exercise-button-active')){
-        details.category = 'exercise';
+  function findCategory() {
+    if(studyBtn.classList.contains('study-button-active')){
+      return 'study';
+    }else if (meditateBtn.classList.contains('meditate-button-active')){
+        return 'meditate';
+    }else if (exerciseBtn.classList.contains('exercise-button-active')){
+        return 'exercise';
     }
-    var categorySelection = details.category;
   };
 
-  // function keepData(){
-  //   var categorySelection = findCategory();
-  //   var activity1 = new Activity();
-  //   console.log('activity1: ', activity1);
-  // };
-  //
-  // keepData();
-
-
-  function startActivity(){
-    var newActivity = new Activity(null, goalInput.value, minutesInput.value, secondsInput.value);
-    console.log(newActivity);
+  
+  function startActivity(e){
+    e.preventDefault;
+    checkInputs();
+    var selectedCat = findCategory();
+    var newActivity = new Activity(selectedCat, goalInput.value, minutesInput.value, secondsInput.value);
+    savedActivities.push(newActivity);
   };
