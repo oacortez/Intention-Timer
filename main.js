@@ -1,4 +1,4 @@
-// //////GLOBAL VARIABLES/////////////////////
+// //////DATA MODEL/////////////////////
 
 
 // //////QUERY SELECTORS///////////////////////
@@ -11,6 +11,7 @@ var goalInput = document.querySelector('#goal');
 var minutesInput = document.querySelector('#minutes');
 var secondsInput = document.querySelector('#seconds');
 var errorMsg = document.querySelector('#errorMsg');
+var newActivitySection = document.querySelector('#newActivitySection');
 
 
 
@@ -19,7 +20,9 @@ studyBtn.addEventListener('click', changeStudyColor);
 meditateBtn.addEventListener('click', changeMeditateColor);
 exerciseBtn.addEventListener('click', changeExerciseColor);
 minutesInput.addEventListener('keydown', checkInvalidChars);
-startActivityBtn.addEventListener('click', checkInputs);
+startActivityBtn.addEventListener('click', startActivity);
+newActivitySection.addEventListener('click', findCategory);
+
 
 // ///////EVENT HANDLERS //////////////////////
 
@@ -58,7 +61,6 @@ function checkInputs() {
   if(studyBtn.classList.contains('study-button-active') === false
     && exerciseBtn.classList.contains('exercise-button-active') === false
     && meditateBtn.classList.contains('meditate-button-active') === false){
-<<<<<<< HEAD
       errorMsg.innerHTML = `<img src="assets/warning.svg" alt="error image"> A category is required`;
       errorMsg.style.visibility = 'visible';
   }else if(!goalInput.value) {
@@ -69,97 +71,33 @@ function checkInputs() {
     errorMsg.style.visibility = 'visible';
   }else if(!secondsInput.value) {
     errorMsg.innerHTML = `<img src="assets/warning.svg" alt="error image"> A second is required`;
-=======
-      errorMsg.innerText = "A Catagory is required"
-      errorMsg.style.visibility = 'visible';
-  }else if(!goalInput.value) {
-    errorMsg.innerText = "A description is required"
-    errorMsg.style.visibility = 'visible';
-  }else if(!minutesInput.value) {
-    errorMsg.innerText = 'A minute is required';
-    errorMsg.style.visibility = 'visible';
-  }else if(!secondsInput.value) {
-    errorMsg.innerText = 'A second is required';
->>>>>>> c4666002b698ac0a1d7567f685918506616db01f
     errorMsg.style.visibility = 'visible';
   }else{
       errorMsg.style.visibility = 'hidden';
     }
   };
 
+  function findCategory(details) {
+    if(event.target.classList.contains('study-button-active')){
+      details.category = 'study';
+    }else if (event.target.classList.contains('meditate-button-active')){
+        details.category = 'meditate';
+    }else if (event.target.classList.contains('exercise-button-active')){
+        details.category = 'exercise';
+    }
+    var categorySelection = details.category;
+  };
+
+  // function keepData(){
+  //   var categorySelection = findCategory();
+  //   var activity1 = new Activity();
+  //   console.log('activity1: ', activity1);
+  // };
+  //
+  // keepData();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function startActivity(){
-//   event.preventDefault();
-//   checkActiveBtn();
-//   checkInputs();
-// }
-
-
-// function checkInputs() {
-//   event.preventDefault();
-//   if(!goalInput.value) {
-//     errorMsg.style.visibility = 'visible';
-//   } else if(!minutesInput.value) {
-//     errorMsg.innerText = 'A minute is required';
-//     errorMsg.style.visibility = 'visible';
-//   } else if(!secondsInput.value) {
-//     errorMsg.innerText = 'A second is required';
-//     errorMsg.style.visibility = 'visible';
-//   } else {
-//     errorMsg.style.visibility = 'hidden';
-//     }
-//   }
-//
-//
-//   function checkActiveBtn() {
-//     // event.preventDefault();
-//     if (studyBtn.classList.contains('study-button-active')
-//     || exerciseBtn.classList.contains('exercise-button-active')
-//     || meditateBtn.classList.contains('meditate-button-active')) {
-//         errorMsg.style.visibility = 'hidden';
-//       } else {
-//       errorMsg.innerText = "A Catagory is required"
-//       errorMsg.style.visibility = 'visible';
-//     }
-//   }
-
-
-
-// if
-
-// function checkActiveBtn() {
-//   if(studyBtn.clicked === true) {
-//      errorMsg.style.visibility = 'visible';
-//   } else {
-//      errorMsg.style.visibility = 'hidden';
-//   }
-// }
-
-
-// // if(studyBtn.clicked === false) {
-//   errorMsg.style.visibility = 'visible';
-// } else {
-//
-// }
-
-
-
-
-
-// grab the error message; the input values; start activity button
-// Create a function that checks if the input value is undefined or Null?
-// If the value is undefined/null then remove the visibility of the error message's CSS
+  function startActivity(){
+    var newActivity = new Activity(null, goalInput.value, minutesInput.value, secondsInput.value);
+    console.log(newActivity);
+  };
