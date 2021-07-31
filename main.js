@@ -14,6 +14,7 @@ var errorMsg = document.querySelector('#errorMsg');
 var newActivitySection = document.querySelector('#newActivitySection');
 var box1 = document.querySelector('#box1');
 var h2 = document.querySelector('h2');
+var timer = document.querySelector('#timer')
 
 
 
@@ -58,7 +59,7 @@ function checkInvalidChars(e){
   }
 };
 
-
+// ******Disable buttons if no button is selected********
 function checkInputs() {
   event.preventDefault();
   if(studyBtn.classList.contains('study-button-active') === false
@@ -66,16 +67,16 @@ function checkInputs() {
     && meditateBtn.classList.contains('meditate-button-active') === false){
       errorMsg.innerHTML = `<img src="assets/warning.svg" alt="error image"> A category is required`;
       errorMsg.style.visibility = 'visible';
-  }else if(!goalInput.value) {
-    errorMsg.innerHTML = `<img src="assets/warning.svg" alt="error image"> A description is required`;
-    errorMsg.style.visibility = 'visible';
-  }else if(!minutesInput.value) {
-    errorMsg.innerHTML = `<img src="assets/warning.svg" alt="error image"> A minute is required`;
-    errorMsg.style.visibility = 'visible';
-  }else if(!secondsInput.value) {
-    errorMsg.innerHTML = `<img src="assets/warning.svg" alt="error image"> A second is required`;
-    errorMsg.style.visibility = 'visible';
-  }else{
+  } else if(!goalInput.value) {
+      errorMsg.innerHTML = `<img src="assets/warning.svg" alt="error image"> A description is required`;
+      errorMsg.style.visibility = 'visible';
+  } else if(!minutesInput.value) {
+      errorMsg.innerHTML = `<img src="assets/warning.svg" alt="error image"> A minute is required`;
+      errorMsg.style.visibility = 'visible';
+  } else if(!secondsInput.value) {
+      errorMsg.innerHTML = `<img src="assets/warning.svg" alt="error image"> A second is required`;
+      errorMsg.style.visibility = 'visible';
+  } else{
       errorMsg.style.visibility = 'hidden';
     }
   };
@@ -97,6 +98,24 @@ function checkInputs() {
     var selectedCat = findCategory();
     var newActivity = new Activity(selectedCat, goalInput.value, minutesInput.value, secondsInput.value);
     savedActivities.push(newActivity);
-    box1.style.visibility = 'hidden'  
     h2.innerText = 'Current Activity'
+    box1.innerHTML = `
+    <section class="timer" id="timer">
+      <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g class="base-timer__circle">
+          <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+        </g>
+      </svg>
+      <span> 
+      "hello"
+      </span>
+    </section>`
   };
+
+  function timeLeft(minutes, seconds) {
+    var minutes = 
+    minutesInput.value
+    secondsInput.value
+  }
+
+  

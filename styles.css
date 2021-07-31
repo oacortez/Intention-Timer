@@ -191,8 +191,8 @@ label {
 
 .study-button-active {
   background-image: url("assets/study-active.svg");
-  border: 2px solid green;
-  color: green;
+  border: 2px solid #B3FD78;
+  color: #B3FD78;
 }
 
 .meditate-button {
@@ -203,8 +203,8 @@ label {
 
 .meditate-button-active {
   background-image: url("assets/meditate-active.svg");
-  border: 2px solid purple;
-  color: purple;
+  border: 2px solid #C278FD;
+  color: #C278FD;
 }
 
  .exercise-button {
@@ -254,4 +254,35 @@ margin-right: 12em;
 
 .hidden {
   display: none;
+}
+
+.timer {
+  display: flex;
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+/* Removes SVG styling that would hide the time label */
+.base-timer__circle {
+  fill: none;
+  stroke: none  ;
+}
+
+/* The SVG path that displays the timer's progress */
+.base-timer__path-elapsed {
+  stroke-width: 2px;
+  stroke: yellow;
+}
+
+.timer-studytimer {
+  stroke: #B3FD78;
+}
+
+.timer-meditate {
+stroke: #C278FD;
+}
+
+.timer-exercise {
+  stroke:salmon
 }
