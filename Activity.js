@@ -8,6 +8,21 @@ class Activity {
     this.id = Date.now();
   }
   startTimer() {
+    setInterval(startTimer, 1000);
+    function startTimer(){
+  
+      var startingMinutes = this.minutes * 60;
+      var startingSeconds = this.seconds;
+
+
+
+      var minutes = Math.floor(startingMinutes / 60);
+      var seconds = startingSeconds % 60;
+      var time = minutes + seconds;
+
+      time--;
+    //     console.log(time);
+    // };
 
   }
   markComplete() {

@@ -14,7 +14,8 @@ var errorMsg = document.querySelector('#errorMsg');
 var newActivitySection = document.querySelector('#newActivitySection');
 var box1 = document.querySelector('#box1');
 var h2 = document.querySelector('h2');
-var timer = document.querySelector('#timer')
+var timer = document.querySelector('#timer');
+var rightSide = document.querySelector('#box2');
 
 
 
@@ -26,6 +27,8 @@ exerciseBtn.addEventListener('click', changeExerciseColor);
 minutesInput.addEventListener('keydown', checkInvalidChars);
 startActivityBtn.addEventListener('click', startActivity);
 newActivitySection.addEventListener('click', findCategory);
+
+
 
 
 // ///////EVENT HANDLERS //////////////////////
@@ -91,31 +94,53 @@ function checkInputs() {
     }
   };
 
-  
+
   function startActivity(e){
     e.preventDefault;
     checkInputs();
     var selectedCat = findCategory();
     var newActivity = new Activity(selectedCat, goalInput.value, minutesInput.value, secondsInput.value);
-    savedActivities.push(newActivity);
+    // savedActivities.push(newActivity);
     h2.innerText = 'Current Activity'
-    box1.innerHTML = `
-    <section class="timer" id="timer">
+    box1.innerHTML =
+  `  <section class="timer" id="timer">
       <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <g class="base-timer__circle">
           <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
         </g>
       </svg>
-      <span> 
-      "hello"
+      <span class = "countdown" id="countdown">
+      ${startingTime(`${minutesInput.value}`, `${secondsInput.value}`)}
       </span>
-    </section>`
+    </section>
+    <button class= "start-button" id="startBtn"> start </button>`;
+
+    // console.log(event);
+    // startTimer();
   };
 
-  function timeLeft(minutes, seconds) {
-    var minutes = 
-    minutesInput.value
-    secondsInput.value
-  }
+  function startingTime(minutes, seconds) {
+    if (seconds < 10) {
+    seconds = `0${seconds}`;
+    }
+    // startTimer();
+    return `${minutes}:${seconds}`;
+  };
 
-  
+  var startBtn = document.querySelector('#startBtn');
+  startBtn.addEventListener('click', startTimer);
+
+  // setInterval(startTimer, 1000);
+  // function startTimer(){
+  //
+  //     var startingMinutes = minutesInput.value * 60;
+  //     var startingSeconds = secondsInput.value;
+  //
+  //
+  //     var minutes = Math.floor(startingMinutes / 60);
+  //     var seconds = startingSeconds % 60;
+  //     var time = minutes + seconds;
+  //
+  //     time--;
+  //     console.log(time);
+  // };
