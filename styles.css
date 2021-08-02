@@ -191,8 +191,8 @@ label {
 
 .study-button-active {
   background-image: url("assets/study-active.svg");
-  border: 2px solid #B3FD78;
-  color: #B3FD78;
+  border: 2px solid green;
+  color: green;
 }
 
 .meditate-button {
@@ -203,8 +203,8 @@ label {
 
 .meditate-button-active {
   background-image: url("assets/meditate-active.svg");
-  border: 2px solid #C278FD;
-  color: #C278FD;
+  border: 2px solid purple;
+  color: purple;
 }
 
  .exercise-button {
@@ -242,7 +242,7 @@ margin-right: 12em;
   color: #EFB7EC;
   margin-left: 25px;
   visibility: hidden;
-  
+
 }
 
 .error-message img{
@@ -250,10 +250,6 @@ margin-right: 12em;
   width: 15px;
   margin-right: 5px;
   margin-left: -20px;
-}
-
-.hidden {
-  display: none;
 }
 
 .timer {
@@ -285,4 +281,8 @@ stroke: #C278FD;
 
 .timer-exercise {
   stroke:salmon
+}
+
+.hidden {
+  display: none;
 }

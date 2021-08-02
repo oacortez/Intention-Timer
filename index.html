@@ -41,6 +41,17 @@
         </div>
         <button type="button" class="start-btn" id="startBtn">START ACTIVITY</button>
       </form>
+      <section class="timer hidden" id="timer">
+          <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="base-timer__circle">
+              <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+            </g>
+          </svg>
+          <span class = "countdown" id="countdown">
+          countdown timer goes here!
+          </span>
+          <button class= "start-timer-button" id="startTimerBtn"> start </button>
+      </section>
     </section>
     <section class="box-2" id="box2">
       <h4>Past Activities</h4>
@@ -49,7 +60,7 @@
         <p>Complete the form to the left to get started!</p>
       </div>
     </section>
-    
+
   </main>
   </body>
 <script type="text/javascript" src="Activity.js"></script>

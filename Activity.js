@@ -7,24 +7,26 @@ class Activity {
     this.isCompleted = false;
     this.id = Date.now();
   }
-  startTimer() {
-    setInterval(startTimer, 1000);
-    function startTimer(){
-  
-      var startingMinutes = this.minutes * 60;
-      var startingSeconds = this.seconds;
+  countdown() {
+    setInterval(displayTimer, 1000);
+    var minutes = parseInt(this.minutes);
+    var seconds = parseInt(this.seconds);
 
+    var totalSeconds = (minutes * 60) + seconds;
 
+    function displayTimer(){
 
-      var minutes = Math.floor(startingMinutes / 60);
-      var seconds = startingSeconds % 60;
-      var time = minutes + seconds;
+      var min = Math.floor(totalSeconds / 60);
+      var sec = totalSeconds % 60;
 
-      time--;
-    //     console.log(time);
-    // };
+      countdown.innerText = `${min}:${sec}`;
+      totalSeconds--;
+      return totalSeconds;
+      console.log(totalSeconds);
 
+    }
   }
+
   markComplete() {
 
   }
