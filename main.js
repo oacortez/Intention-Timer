@@ -67,7 +67,6 @@ function checkInvalidChars(e){
 // ******Disable buttons if no button is selected********
 function checkInputs() {
   event.preventDefault();
-
   if(studyBtn.classList.contains('study-button-active') === false
     && exerciseBtn.classList.contains('exercise-button-active') === false
     && meditateBtn.classList.contains('meditate-button-active') === false){
@@ -84,6 +83,9 @@ function checkInputs() {
       errorMsg.style.visibility = 'visible';
   } else{
       errorMsg.style.visibility = 'hidden';
+      form.classList.add('hidden');
+      timerView.style.visibility = 'visible';
+      h2.innerText = 'Current Activity';
     }
   };
 
@@ -97,13 +99,10 @@ function checkInputs() {
     }
   };
 
-  function startActivity(e){
-    e.preventDefault;
+  function startActivity(){
+    event.preventDefault;
     checkInputs();
-    h2.innerText = 'Current Activity';
     activityDisplay.innerText = `${goalInput.value}`;
-    form.classList.add('hidden');
-    timerView.style.visibility = 'visible'
     startingTime();
   };
 
