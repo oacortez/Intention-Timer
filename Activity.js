@@ -28,10 +28,9 @@ class Activity {
       }
 
       if(sec <= 0){
-        countdown.innerText = `${min}:${sec}`;
+        countdown.innerText = '00:00';
+        startTimerBtn.innerText = 'You did it! Great work!';
         clearInterval(displayTimer);
-        countdown.innerText = `${'Completed!'}`;
-        // alert('Great work!');
       }else{
         countdown.innerText = `${min}:${sec}`;
         totalSeconds--;

@@ -6,7 +6,7 @@ var form = document.querySelector('.activity-form');
 var studyBtn = document.querySelector('#studyBtn');
 var meditateBtn = document.querySelector('#meditateBtn');
 var exerciseBtn = document.querySelector('#exerciseBtn');
-var startActivityBtn = document.querySelector('#startBtn');
+var startActivityBtn = document.querySelector('#startBtn')
 var goalInput = document.querySelector('#goal');
 var minutesInput = document.querySelector('#minutes');
 var secondsInput = document.querySelector('#seconds');
@@ -18,6 +18,7 @@ var timerView = document.querySelector('#timerView');
 var rightSide = document.querySelector('#box2');
 var countdown = document.querySelector('#countdown');
 var startTimerBtn = document.querySelector('#startTimerBtn');
+var activityDisplay = document.querySelector('#activityOutput');
 
 
 // //////////EVENT LISTENERS ///////////////////
@@ -66,6 +67,7 @@ function checkInvalidChars(e){
 // ******Disable buttons if no button is selected********
 function checkInputs() {
   event.preventDefault();
+
   if(studyBtn.classList.contains('study-button-active') === false
     && exerciseBtn.classList.contains('exercise-button-active') === false
     && meditateBtn.classList.contains('meditate-button-active') === false){
@@ -95,11 +97,11 @@ function checkInputs() {
     }
   };
 
-
   function startActivity(e){
     e.preventDefault;
     checkInputs();
     h2.innerText = 'Current Activity';
+    activityDisplay.innerText = `${goalInput.value}`;
     form.classList.add('hidden');
     timerView.style.visibility = 'visible'
     startingTime();
@@ -107,10 +109,11 @@ function checkInputs() {
 
   function startingTime() {
      countdown.innerText = `${minutesInput.value}:${secondsInput.value}`;
+
   };
 
   function startTimer(){
     var selectedCat = findCategory();
     var newActivity = new Activity(selectedCat, goalInput.value, minutesInput.value, secondsInput.value);
     newActivity.countdown();
-  }
+  };

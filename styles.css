@@ -57,7 +57,7 @@ main {
   margin-top: 0;
   border-left: 4px solid #46424D;
   margin-right: 15em;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   margin-left: 2em;
   padding-right: 10em;
 }
@@ -303,7 +303,7 @@ h2 {
 
 .countdown {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .start-timer-button {
@@ -318,5 +318,5 @@ h2 {
   border-radius: 50%;
   border: 2px solid red;
   cursor:pointer;
-  
+
 }
