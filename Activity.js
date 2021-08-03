@@ -19,11 +19,24 @@ class Activity {
       var min = Math.floor(totalSeconds / 60);
       var sec = totalSeconds % 60;
 
-      countdown.innerText = `${min}:${sec}`;
-      totalSeconds--;
-      return totalSeconds;
-      console.log(totalSeconds);
+      if(min < 10){
+        min = `0${min}`;
+      }
 
+      if(sec < 10){
+        sec = `0${sec}`;
+      }
+
+      if(sec <= 0){
+        countdown.innerText = `${min}:${sec}`;
+        clearInterval(displayTimer);
+        countdown.innerText = `${'Completed!'}`;
+        // alert('Great work!');
+      }else{
+        countdown.innerText = `${min}:${sec}`;
+        totalSeconds--;
+        return totalSeconds;
+      }
     }
   }
 
