@@ -7,13 +7,30 @@ class Activity {
     this.isCompleted = false;
     this.id = Date.now();
   }
-  startTimer() {
-    
+  countdown() {
+    setInterval(displayTimer, 1000);
+    var minutes = parseInt(this.minutes);
+    var seconds = parseInt(this.seconds);
+
+    var totalSeconds = (minutes * 60) + seconds;
+
+    function displayTimer(){
+
+      var min = Math.floor(totalSeconds / 60);
+      var sec = totalSeconds % 60;
+
+      countdown.innerText = `${min}:${sec}`;
+      totalSeconds--;
+      return totalSeconds;
+      console.log(totalSeconds);
+
+    }
   }
+
   markComplete() {
 
   }
   saveToStorage() {
 
   }
-}
+};

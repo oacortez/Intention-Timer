@@ -4,9 +4,6 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +14,12 @@
       <h1>INTENTION TIMER</h1>
     </header>
   <h2>New Activity</h2>
+  
   <main>
     <section class="box-1" id="box1">
       <form class="activity-form">
         <h3 class="category">Select a category:</h3>
-        <div class = "new-activity-section">
+        <div class = "new-activity-section" id="newActivitySection">
           <button type="button" class="study-button" id="studyBtn">Study</button>
           <button type="button" class="meditate-button" id="meditateBtn">Meditate</button>
           <button type="button" class="exercise-button" id="exerciseBtn">Exercise</button>
@@ -29,17 +27,31 @@
         <div class="input-1">
           <label for="goal">What would you like to accomplish during this time?</label>
           <input type="text" class="accomplish-input" id="goal"/>
+            <label class= "error-message" id="errorMsg"><img src="assets/warning.svg" alt="error image"></label>
         </div>
         <div class="time-labels">
           <label for="minutes">Minutes</label>
           <label for="seconds">Seconds</label>
           </div>
         <div class="time-inputs">
-          <input type="text" class="minutes" id="minutes"/>
-          <input type="text" class="seconds" id="seconds"/>
+          <input type="number" min="0" max="60" class="minutes" id="minutes"/>
+          <input type="number" min="0" max="59" class="seconds" id="seconds"/>
         </div>
-        <button type="button" class="start-btn" id="start-btn">START ACTIVITY</button>
+        <button type="button" class="start-btn" id="startBtn">START ACTIVITY</button>
       </form>
+      <section class="timer-view" id="timerView">
+        <p class="activity-output" id="activityOutput">Do some shit</p>
+        <span class = "countdown" id="countdown">
+            countdown timer goes here!
+        </span>
+        <button class= "start-timer-button" id="startTimerBtn"> START </button>
+
+        <!-- <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g class="base-timer__circle">
+            <circle class="base-timer__path-elapsed" cx="23" cy="23" r="23" />
+          </g>
+        </svg> -->
+      </section>
     </section>
     <section class="box-2" id="box2">
       <h4>Past Activities</h4>
@@ -48,6 +60,7 @@
         <p>Complete the form to the left to get started!</p>
       </div>
     </section>
+
   </main>
   </body>
 <script type="text/javascript" src="Activity.js"></script>

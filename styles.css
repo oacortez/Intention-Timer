@@ -17,6 +17,7 @@ body{
   height: 100%;
   width: 100%;
 }
+
 header {
   background-color: #46424D;
   color: #FFF;
@@ -27,6 +28,7 @@ header {
   padding-bottom:8px;
   text-align: center;
 }
+
 main {
   display: flex;
   flex-direction: row;
@@ -34,6 +36,7 @@ main {
   margin-left: 2em;
   color: #CBC9CF;
 }
+
 .box-1 {
   display: flex;
   flex-direction: column;
@@ -46,6 +49,9 @@ main {
 }
 
 .box-2 {
+  color: #FFF;
+  font-family: Montserrat;
+  font-weight: 300;
   display: flex;
   flex-direction: column;
   margin-top: 0;
@@ -71,24 +77,21 @@ h4 {
   justify-content: center;
   flex-direction: column;
   margin: 0;
-  
+
 }
-
-
-
-
-
 
 .new-activity-section {
   display: flex;
   justify-content: space-around;
-  
+
 }
+
 .time {
   display: flex;
   flex-direction: row ;
   justify-content: space-around;
-  }
+}
+
 .minutes, .seconds {
   outline: none;
   outline-style: none;
@@ -100,7 +103,8 @@ h4 {
   padding: 3px 10px;
   color: #EEEEEE;
   background-color: transparent;
-  }
+}
+
 .accomplish-input{
   display:flex;
   outline: none;
@@ -114,6 +118,7 @@ h4 {
   color: #EEEEEE;
   background-color: transparent;
 }
+
 .inputs {
   display:flex;
   outline: none;
@@ -127,7 +132,9 @@ h4 {
   color: #EEEEEE;
   background-color: transparent;
 }
+
 .start-btn {
+  cursor:pointer;
   margin-top: 3em;
   width: 10em;
   height: 2.5em;
@@ -136,90 +143,180 @@ h4 {
   border-radius: .3em;
   border: none;
 }
+
 .activity-form {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 .input-1 {
   display: flex;
   flex-direction: column;
   padding: 2em;
 }
 
-
 h3 {
   margin-left: 3em;
 }
+
 label {
   padding:1em
 }
-  /* //NEW STUFF**************** */
 
-  h2 {
-    font-family: Montserrat;
-    font-weight: 300;
-    color: #FFF;
-    margin-left: 1em;
-  }
+h2 {
+  font-family: Montserrat;
+  font-weight: 300;
+  color: #FFF;
+  margin-left: 1em;
+}
 
- .new-activity-section button { */
-  display: flex; 
-   width: 8.5em; 
+ .new-activity-section button {
+  display: flex;
+   width: 8.5em;
   height: 4em;
   background-color: #46424D;
+  border-radius: .3em;
+  cursor:pointer;
+  justify-content: center;
+  align-items: flex-end;
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: top;
+  padding: .5em;
+ }
+
+
+.study-button {
+  background-image: url("assets/study.svg");
   border: 2px solid #CBC9CF;
   color: #CBC9CF;
-  border-radius: .3em;
- }  
-
- #studyBtn {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  background-image: url("/assets/study.svg");
-  background-size: 1.5em;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position: top;
-  padding: .5em;
 }
 
-#meditateBtn {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+.study-button-active {
+  background-image: url("assets/study-active.svg");
+  border: 2px solid #B3FD78;
+  color: #B3FD78;
+}
+
+.meditate-button {
   background-image: url("assets/meditate.svg");
-  background-size: 1.5em;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position: top;
-  padding: .5em;
+  border: 2px solid #CBC9CF;
+  color: #CBC9CF;
 }
 
- #exerciseBtn {
-  display: flex;
-  justify-content: center; 
-  align-items: flex-end; 
+.meditate-button-active {
+  background-image: url("assets/meditate-active.svg");
+  border: 2px solid #C278FD;
+  color: #C278FD;
+}
+
+.exercise-button {
   background-image: url("assets/exercise.svg");
-  background-size: 1.5em;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position: top;
-   padding: .5em; 
- } 
+  border: 2px solid #CBC9CF;
+  color: #CBC9CF;
+ }
+
+.exercise-button-active {
+  background-image: url("assets/exercise-active.svg");
+  border: 2px solid salmon;
+  color: salmon;
+}
 
 .time-labels {
-display:flex;
-justify-content: space-between;
-margin-left: 2em;
-margin-right: 12em;
-} 
-
-.time-inputs {
   display:flex;
   justify-content: space-between;
-  margin-left: 3em;
-  margin-right: 7em;
-  /* width: 5em; */
-  /* border: 2px solid yellow; */
-} 
+  margin-left: 2em;
+  margin-right: 12em;
+}
+
+.minutes {
+  width: 15em;
+  margin-left: 2.5em;
+}
+
+.seconds {
+  width: 15em;
+  float:right;
+  margin-right:5em;
+}
+
+.error-message {
+  padding-bottom: 1em;
+  color: #EFB7EC;
+  margin-left: 25px;
+  visibility: hidden;
+
+}
+
+.error-message img{
+  height:15px;
+  width: 15px;
+  margin-right: 5px;
+  margin-left: -20px;
+}
+
+.timer {
+  display: flex;
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+/* Removes SVG styling that would hide the time label */
+.base-timer__circle {
+  fill: none;
+  stroke: none  ;
+}
+
+/* The SVG path that displays the timer's progress */
+.base-timer__path-elapsed {
+  stroke-width: 2px;
+  stroke: yellow;
+}
+
+.timer-studytimer {
+  stroke: #B3FD78;
+}
+
+.timer-meditate {
+  troke: #C278FD;
+}
+
+.timer-exercise {
+  stroke:salmon
+}
+
+.hidden {
+  display: none;
+}
+
+.timer-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30em;
+  height: 40em;
+  visibility: hidden;
+  margin-left: 6em;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;  
+}
+
+.start-timer-button {
+  display:block;
+  background-color: #46424D;
+  color: #FFF;
+  font-family: Montserrat;
+  font-weight: 400;
+  height: 200px;
+  width: 200px;
+  margin-top: 5em;
+  border-radius: 50%;
+  border: 2px solid red;
+  cursor:pointer;
+  
+}
