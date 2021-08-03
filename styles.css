@@ -49,6 +49,9 @@ main {
 }
 
 .box-2 {
+  color: #FFF;
+  font-family: Montserrat;
+  font-weight: 300;
   display: flex;
   flex-direction: column;
   margin-top: 0;
@@ -82,11 +85,12 @@ h4 {
   justify-content: space-around;
 
 }
+
 .time {
   display: flex;
   flex-direction: row ;
   justify-content: space-around;
-  }
+}
 
 .minutes, .seconds {
   outline: none;
@@ -99,7 +103,7 @@ h4 {
   padding: 3px 10px;
   color: #EEEEEE;
   background-color: transparent;
-  }
+}
 
 .accomplish-input{
   display:flex;
@@ -141,8 +145,8 @@ h4 {
 }
 
 .activity-form {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-1 {
@@ -159,12 +163,12 @@ label {
   padding:1em
 }
 
-  h2 {
-    font-family: Montserrat;
-    font-weight: 300;
-    color: #FFF;
-    margin-left: 1em;
-  }
+h2 {
+  font-family: Montserrat;
+  font-weight: 300;
+  color: #FFF;
+  margin-left: 1em;
+}
 
  .new-activity-section button {
   display: flex;
@@ -183,7 +187,7 @@ label {
  }
 
 
- .study-button {
+.study-button {
   background-image: url("assets/study.svg");
   border: 2px solid #CBC9CF;
   color: #CBC9CF;
@@ -191,8 +195,8 @@ label {
 
 .study-button-active {
   background-image: url("assets/study-active.svg");
-  border: 2px solid green;
-  color: green;
+  border: 2px solid #B3FD78;
+  color: #B3FD78;
 }
 
 .meditate-button {
@@ -203,27 +207,27 @@ label {
 
 .meditate-button-active {
   background-image: url("assets/meditate-active.svg");
-  border: 2px solid purple;
-  color: purple;
+  border: 2px solid #C278FD;
+  color: #C278FD;
 }
 
- .exercise-button {
+.exercise-button {
   background-image: url("assets/exercise.svg");
-   border: 2px solid #CBC9CF;
-   color: #CBC9CF;
+  border: 2px solid #CBC9CF;
+  color: #CBC9CF;
  }
 
- .exercise-button-active {
-   background-image: url("assets/exercise-active.svg");
-   border: 2px solid salmon;
-   color: salmon;
- }
+.exercise-button-active {
+  background-image: url("assets/exercise-active.svg");
+  border: 2px solid salmon;
+  color: salmon;
+}
 
 .time-labels {
-display:flex;
-justify-content: space-between;
-margin-left: 2em;
-margin-right: 12em;
+  display:flex;
+  justify-content: space-between;
+  margin-left: 2em;
+  margin-right: 12em;
 }
 
 .minutes {
@@ -276,7 +280,7 @@ margin-right: 12em;
 }
 
 .timer-meditate {
-stroke: #C278FD;
+  troke: #C278FD;
 }
 
 .timer-exercise {
@@ -285,4 +289,34 @@ stroke: #C278FD;
 
 .hidden {
   display: none;
+}
+
+.timer-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30em;
+  height: 40em;
+  visibility: hidden;
+  margin-left: 6em;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;  
+}
+
+.start-timer-button {
+  display:block;
+  background-color: #46424D;
+  color: #FFF;
+  font-family: Montserrat;
+  font-weight: 400;
+  height: 200px;
+  width: 200px;
+  margin-top: 5em;
+  border-radius: 50%;
+  border: 2px solid red;
+  cursor:pointer;
+  
 }

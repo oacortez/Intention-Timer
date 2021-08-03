@@ -14,7 +14,7 @@ var errorMsg = document.querySelector('#errorMsg');
 var newActivitySection = document.querySelector('#newActivitySection');
 var box1 = document.querySelector('#box1');
 var h2 = document.querySelector('h2');
-var timer = document.querySelector('#timer');
+var timerView = document.querySelector('#timerView');
 var rightSide = document.querySelector('#box2');
 var countdown = document.querySelector('#countdown');
 var startTimerBtn = document.querySelector('#startTimerBtn');
@@ -101,7 +101,7 @@ function checkInputs() {
     checkInputs();
     h2.innerText = 'Current Activity';
     form.classList.add('hidden');
-    timer.classList.remove('hidden');
+    timerView.style.visibility = 'visible'
     startingTime();
   };
 
