@@ -1,3 +1,4 @@
+
 # Intention Timer
 
 
@@ -26,7 +27,11 @@ Once the user has chosen their category they can then input what (specifically) 
 
 ## Illustrations
 
-<!-- Pictures go here  -->
+<img width="1421" alt="Screen Shot 2021-08-03 at 9 26 13 PM" src="https://user-images.githubusercontent.com/70819338/128117743-e2a16c30-d257-4bcb-98a6-f4110a69d300.png">
+<img width="1420" alt="Screen Shot 2021-08-03 at 9 26 43 PM" src="https://user-images.githubusercontent.com/70819338/128117793-c038f846-2ef5-4392-a652-800a0f898eb5.png">
+<img width="1418" alt="Screen Shot 2021-08-03 at 9 27 08 PM" src="https://user-images.githubusercontent.com/70819338/128117804-c447adb2-546e-46f8-b620-9c244b0fc281.png">
+
+
 
 
 ## Install + Setup
