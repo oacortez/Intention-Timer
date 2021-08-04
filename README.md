@@ -14,9 +14,8 @@ Mod 1
   - [Project Specs](#project-specs)
 
 ## Abstract
-	This is an interactive website where a user can set an intention to study, meditate, or exercise. 
-  Once the user has chosen their category they can then input what (specifically) they would like to accomplish during that time, and set a timer for the length of the session. 
-  Once they click the "start activity" button a timer will display and they can start the countdown whenever they would like.
+This is an interactive website where a user can set an intention to study, meditate, or exercise. 
+Once the user has chosen their category they can then input what (specifically) they would like to accomplish during that time, and set a timer for the length of the session. Once they click the "start activity" button a timer will display and they can start the countdown whenever they would like.
 
 ## Technologies
   - Javascript
