@@ -5,7 +5,6 @@ Mod 1
 ## Table of Contents
   - [Abstract](#abstract)
   - [Technologies](#technologies)
-  - [Code Architecture](#code-architecture)
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
@@ -24,12 +23,10 @@ Once the user has chosen their category they can then input what (specifically) 
   - CSS
 
 
-## Code Architecture
-
 
 ## Illustrations
 
-Use https://gifcap.dev/ to make GIFs
+<!-- Pictures go here  -->
 
 
 ## Install + Setup
@@ -43,14 +40,15 @@ Use https://gifcap.dev/ to make GIFs
   - [Oscar Cortez Barrientos](https://github.com/oacortez)
 
 ## Wins
-	- What went well!
-	- Successes
+- We got to display our countdown timer.
+- We got to display differnt color buttons once selected and as well displaying errors messages when the user did not input anything into our main form.
 
 ## Challenges + Improvements
-	- What was difficult & how you would like to improve on code/project
-	- Any Bugs
-	- Future Iterations
+- A challenge we faced was creating the timer and as well displaying the timer. Althought the timer stops at 00:00 in the DOM the function is still being invoked in the background every second.
+- A main bug we faced was our function for the timer kept getting invoked and as well we saw our timer going into negative numbers.
+- Another main bug we faced was when a user clicked the "Start Activity" button the timer will be firing twice at the same time.
+- We didn't have time to create cards of saved activitys. As well exploring local storage.
 
 
 ## Project Specs
-  - The project spec & rubric can be found [here](insert project spec sheet here)
+  - The project spec [here]() & rubric can be found [here](https://frontend.turing.edu/projects/module-1/intention-timer-group.html)
