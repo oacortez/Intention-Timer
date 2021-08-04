@@ -30,7 +30,11 @@ Once the user has chosen their category they can then input what (specifically) 
 
 
 ## Install + Setup
-	- Install instructions, how to access the website and how to use the website
+Install instructions :
+
+Fork this repo
+Clone the repo to your local machine
+View the project in the browser by running open index.html in your terminal
 
 
 
