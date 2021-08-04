@@ -1,5 +1,5 @@
 # Intention Timer
-Mod 1 
+
 
 
 ## Table of Contents
