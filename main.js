@@ -1,5 +1,3 @@
-// //////DATA MODEL/////////////////////
-savedActivities = [];
 
 // //////QUERY SELECTORS///////////////////////
 var form = document.querySelector('.activity-form');
@@ -20,7 +18,6 @@ var countdown = document.querySelector('#countdown');
 var startTimerBtn = document.querySelector('#startTimerBtn');
 var activityDisplay = document.querySelector('#activityOutput');
 
-
 // //////////EVENT LISTENERS ///////////////////
 studyBtn.addEventListener('click', changeStudyColor);
 meditateBtn.addEventListener('click', changeMeditateColor);
@@ -30,11 +27,7 @@ startActivityBtn.addEventListener('click', startActivity);
 newActivitySection.addEventListener('click', findCategory);
 startTimerBtn.addEventListener('click', startTimer);
 
-
-
-
 // ///////EVENT HANDLERS //////////////////////
-
 function changeStudyColor(){
   studyBtn.classList.toggle('study-button-active');
   meditateBtn.classList.remove('meditate-button-active');
@@ -102,8 +95,16 @@ function checkInputs() {
   };
 
   function startingTime() {
-     countdown.innerText = `${minutesInput.value}:${secondsInput.value}`;
+    var min = minutesInput.value;
+    var sec = secondsInput.value;
 
+    if(min < 10){
+      min = `0${min}`;
+    }
+    if(sec < 10){
+      sec = `0${sec}`;
+    }
+    countdown.innerText = `${min}:${sec}`;
   };
 
   function startTimer(){
@@ -120,5 +121,4 @@ function checkInputs() {
     } else if (meditateBtn.classList.contains('meditate-button-active')) {
       startTimerBtn.classList.add('start-timer-button-meditate') 
     }
-
-  }
+  };

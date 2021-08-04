@@ -1,21 +1,16 @@
-/* Main background: #2B2733
-Text on main background: #CBC9CF
-Header, cards: #46424D
-Card shadow: #26222D
-Text on header and cards: #FFF
-Study: #B3FD78
-Meditate: #C278FD
-Exercise: #FD8078
-Error: #EFB7EC */
-/* * {
-  border: 2px solid yellow;
-} */
 
 body{
   background-color: #2B2733;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   margin-top: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  overflow-x: hidden;
+  position: fixed; 
+  top: 0; right: 0; bottom: 0; left: 0;
+  align-content: flex-end;
 }
 
 header {
@@ -27,6 +22,7 @@ header {
   padding-top: 8px;
   padding-bottom:8px;
   text-align: center;
+  margin-left: -10px;
 }
 
 main {
@@ -35,6 +31,7 @@ main {
   justify-content: space-between;
   margin-left: 2em;
   color: #CBC9CF;
+  flex-grow: 1;
 }
 
 .box-1 {
@@ -46,6 +43,7 @@ main {
   font-family: Montserrat;
   font-weight: 400;
   border-right:#46424D;
+  border-radius: 5px;
 }
 
 .box-2 {
@@ -57,15 +55,14 @@ main {
   margin-top: 0;
   border-left: 4px solid #46424D;
   margin-right: 15em;
-  /* border: 2px solid green; */
   margin-left: 2em;
   padding-right: 10em;
+  padding-top: 20px;
 }
 
 h4 {
   display: flex;
   flex-direction: column;
-  border: 2px solid orange;
   font-family: Montserrat;
   font-weight: 300;
   font-size: 24px;
@@ -76,14 +73,13 @@ h4 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 0;
-
+  margin-left: 5em;
+  width: 25em;
 }
 
 .new-activity-section {
   display: flex;
   justify-content: space-around;
-
 }
 
 .time {
@@ -136,7 +132,7 @@ h4 {
 .start-btn {
   cursor:pointer;
   margin-top: 3em;
-  width: 10em;
+  width: 12em;
   height: 2.5em;
   align-self: flex-end;
   margin-right: 4em;
@@ -170,7 +166,7 @@ h2 {
   margin-left: 1em;
 }
 
- .new-activity-section button {
+.new-activity-section button {
   display: flex;
    width: 8.5em;
   height: 4em;
@@ -184,8 +180,7 @@ h2 {
   background-position: center;
   background-position: top;
   padding: .5em;
- }
-
+}
 
 .study-button {
   background-image: url("assets/study.svg");
@@ -263,24 +258,12 @@ h2 {
   width: 300px;
 }
 
-/* Removes SVG styling that would hide the time label */
-.base-timer__circle {
-  fill: none;
-  stroke: none  ;
-}
-
-/* The SVG path that displays the timer's progress */
-.base-timer__path-elapsed {
-  stroke-width: 2px;
-  stroke: yellow;
-}
-
 .timer-studytimer {
   stroke: #B3FD78;
 }
 
 .timer-meditate {
-  troke: #C278FD;
+  stroke: #C278FD;
 }
 
 .timer-exercise {
@@ -304,6 +287,8 @@ h2 {
 .countdown {
   display: flex;
   justify-content: center;
+  font-size: 3em;
+  font-weight: 400;
 }
 
 .start-timer-button {
@@ -316,7 +301,6 @@ h2 {
   width: 200px;
   margin-top: 5em;
   border-radius: 50%;
-  /* border: 2px solid red; */
   cursor:pointer;
 }
 
@@ -330,4 +314,8 @@ h2 {
 
 .start-timer-button-study {
   border: 2px solid #B3FD78;
+}
+
+.main-line {
+  border-left: 2px solid #46424D;
 }
