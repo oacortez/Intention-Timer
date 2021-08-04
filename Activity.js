@@ -22,12 +22,10 @@ class Activity {
       if(min < 10){
         min = `0${min}`;
       }
-
       if(sec < 10){
         sec = `0${sec}`;
       }
-
-      if(sec <= 0){
+      if(totalSeconds <= 0){
         countdown.innerText = '00:00';
         startTimerBtn.innerText = 'You did it! Great work!';
         clearInterval(displayTimer);

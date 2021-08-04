@@ -316,7 +316,18 @@ h2 {
   width: 200px;
   margin-top: 5em;
   border-radius: 50%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   cursor:pointer;
+}
 
+.start-timer-button-exercise {
+  border: 2px solid salmon;
+}
+
+.start-timer-button-meditate {
+  border: 2px solid #C278FD;
+}
+
+.start-timer-button-study {
+  border: 2px solid #B3FD78;
 }

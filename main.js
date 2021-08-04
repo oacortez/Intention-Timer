@@ -36,35 +36,29 @@ startTimerBtn.addEventListener('click', startTimer);
 // ///////EVENT HANDLERS //////////////////////
 
 function changeStudyColor(){
-  event.preventDefault();
   studyBtn.classList.toggle('study-button-active');
   meditateBtn.classList.remove('meditate-button-active');
   exerciseBtn.classList.remove('exercise-button-active');
 };
 
 function changeMeditateColor(){
-  event.preventDefault();
   meditateBtn.classList.toggle('meditate-button-active');
   studyBtn.classList.remove('study-button-active');
   exerciseBtn.classList.remove('exercise-button-active');
 };
 
 function changeExerciseColor(){
-  event.preventDefault();
   exerciseBtn.classList.toggle('exercise-button-active');
   meditateBtn.classList.remove('meditate-button-active');
   studyBtn.classList.remove('study-button-active');
 };
 
-function checkInvalidChars(e){
+function checkInvalidChars(){
   var invalidChars = ['e', '+', '-', '.'];
-  if(invalidChars.includes(e.key)){
-    e.preventDefault();
-    console.log('it ran!!');
+  if(invalidChars.includes(e.key)){ 
   }
 };
 
-// ******Disable buttons if no button is selected********
 function checkInputs() {
   event.preventDefault();
   if(studyBtn.classList.contains('study-button-active') === false
@@ -102,6 +96,7 @@ function checkInputs() {
   function startActivity(){
     event.preventDefault;
     checkInputs();
+    changeBtnColor();
     activityDisplay.innerText = `${goalInput.value}`;
     startingTime();
   };
@@ -116,3 +111,14 @@ function checkInputs() {
     var newActivity = new Activity(selectedCat, goalInput.value, minutesInput.value, secondsInput.value);
     newActivity.countdown();
   };
+  
+  function changeBtnColor() {
+    if (studyBtn.classList.contains('study-button-active')) {
+      startTimerBtn.classList.add('start-timer-button-study')
+    } else if (exerciseBtn.classList.contains('exercise-button-active')) {
+      startTimerBtn.classList.add('start-timer-button-exercise')
+    } else if (meditateBtn.classList.contains('meditate-button-active')) {
+      startTimerBtn.classList.add('start-timer-button-meditate') 
+    }
+
+  }
