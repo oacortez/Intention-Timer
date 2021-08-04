@@ -60,4 +60,4 @@ View the project in the browser by running open index.html in your terminal
 
 
 ## Project Specs
-  - The project spec [here]() & rubric can be found [here](https://frontend.turing.edu/projects/module-1/intention-timer-group.html)
+  - The project spec [here](https://oacortez.github.io/Intention-Timer/) & rubric can be found [here](https://frontend.turing.edu/projects/module-1/intention-timer-group.html)
